@@ -381,29 +381,42 @@ button,input{font:inherit;color:inherit}
 /* ===== 11 · A conta ===== */
 .calc{display:grid;grid-template-columns:5fr 7fr;gap:16px;margin-top:56px}
 .cbox{padding:32px 40px;border-radius:32px;background:var(--s1);box-shadow:inset 0 0 0 1px var(--line),inset 0 1px 0 var(--line-2)}
-.ctl{display:flex;flex-direction:column;gap:28px}
-.ctl label{display:flex;flex-direction:column;gap:16px}
-.ctl .top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;font:500 16px/24px var(--f-ui);color:var(--muted)}
-.ctl .top output{font:600 20px/28px var(--f-disp);color:var(--text);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.ctl{display:flex;flex-direction:column;gap:24px}
+.ctl label{display:flex;flex-direction:column;gap:12px}
+.ctl .top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;font:400 14px/20px var(--f-ui);color:var(--muted)}
+.ctl .top output{font:600 16px/20px var(--f-ui);color:var(--text);font-variant-numeric:tabular-nums}
 input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:4px;border-radius:2px;outline:none;background:linear-gradient(90deg,var(--brand) var(--p,50%),#ffffff1f var(--p,50%));cursor:pointer}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:#fff;box-shadow:0 2px 8px #00000066,0 0 0 1px #0000001a;transition:transform .2s}
-input[type=range]:active::-webkit-slider-thumb{transform:scale(1.12)}
-input[type=range]::-moz-range-thumb{width:28px;height:28px;border:0;border-radius:50%;background:#fff;box-shadow:0 2px 8px #00000066}
-.fix{display:flex;justify-content:space-between;gap:16px;padding-top:24px;border-top:1px solid var(--line);font:400 14px/20px var(--f-ui);color:var(--muted)}
-.fix b{color:var(--text);font-weight:600}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 4px #0000004d,0 0 0 1px #0000001a;transition:transform .2s}
+input[type=range]:active::-webkit-slider-thumb{transform:scale(1.25)}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border:0;border-radius:50%;background:#fff;box-shadow:0 1px 4px #0000004d}
+.gsel{display:flex;flex-direction:column;gap:12px}
+.gchips{display:flex;flex-wrap:wrap;gap:8px}
+.gch{display:inline-flex;align-items:center;gap:4px;height:32px;padding:0 12px;border:0;border-radius:999px;background:#ffffff0a;box-shadow:inset 0 0 0 1px var(--line-2);font:500 14px/20px var(--f-ui);color:var(--muted);cursor:pointer;transition:background .2s,color .2s,box-shadow .2s}
+.gch b{font-weight:600}
+.gch.on{background:var(--brand-a16);color:var(--text);box-shadow:inset 0 0 0 1px var(--brand)}
+.gch.on b{color:var(--brand-soft)}
+.gch:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.more summary{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-top:16px;border-top:1px solid var(--line);font:500 14px/20px var(--f-ui);color:var(--muted);cursor:pointer;list-style:none;transition:color .2s}
+.more summary::-webkit-details-marker{display:none}
+.more summary:hover{color:var(--text)}
+.more summary svg{width:16px;height:16px;transition:transform .3s var(--ease)}
+.more[open] summary svg{transform:rotate(180deg)}
+.more-in{display:flex;flex-direction:column;gap:24px;padding-top:24px}
+.sub{font:400 16px/24px var(--f-ui);color:var(--muted)}
+.sub b{color:var(--text);font-weight:600}
 .cres{display:flex;flex-direction:column;background:radial-gradient(80% 60% at 80% 0%,var(--brand-a20),transparent 70%),var(--s1)}
 .big-n{font:700 80px/88px var(--f-disp);letter-spacing:-.05em;font-variant-numeric:tabular-nums;margin:12px 0 4px}
-.mths{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:24px}
-.mths div{display:flex;flex-direction:column;gap:4px;padding:16px;border-radius:16px;background:var(--s2);box-shadow:inset 0 0 0 1px var(--line)}
-.mths b{font:600 20px/28px var(--f-disp);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
-.mths span{font:400 12px/16px var(--f-ui);color:var(--muted)}
 .chart{display:flex;align-items:flex-end;gap:4px;height:128px;margin-top:32px}
 .chart i{flex:1;height:0;border-radius:4px 4px 2px 2px;background:linear-gradient(180deg,var(--brand-soft),var(--brand-strong));transition:height .8s var(--ease);transition-delay:var(--d,0s)}
 .chart i.neg{background:var(--s4)}
 .axis{display:flex;justify-content:space-between;margin-top:8px;font:500 12px/16px var(--f-ui);color:var(--subtle)}
 .brk{margin-top:24px;border-top:1px solid var(--line)}
+.conta{margin-top:24px}
+.conta .brk{margin-top:16px}
 .brk div{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line);font:400 14px/20px var(--f-ui);color:var(--muted);font-variant-numeric:tabular-nums}
 .brk div b{color:var(--text);font-weight:600}
+.brk .two{display:flex;flex-direction:column}
+.brk .two small{font:400 12px/16px var(--f-ui);color:var(--subtle)}
 .brk div.tot{color:var(--text);font-weight:600;border-bottom:0}
 .brk div.tot b{color:var(--brand-soft);font-size:16px;line-height:20px}
 .disc{margin-top:24px;font:400 12px/16px var(--f-ui);color:var(--subtle)}
@@ -521,7 +534,7 @@ input[type=range]::-moz-range-thumb{width:28px;height:28px;border:0;border-radiu
   .wy.big .ttl{font-size:72px}
   .cc{scroll-snap-align:center}
   .marq .ttl{font-size:64px} .marq .star{width:32px;height:32px}
-  .seu-cards,.why,.prods,.plans,.mths{grid-template-columns:1fr}
+  .seu-cards,.why,.prods,.plans{grid-template-columns:1fr}
   .wy.big{grid-column:span 1}
   .tl{grid-template-columns:1fr}
   .big-n{font-size:56px;line-height:64px}
@@ -546,6 +559,7 @@ input[type=range]::-moz-range-thumb{width:28px;height:28px;border:0;border-radiu
   <symbol id="i-star" viewBox="0 0 32 32"><path d="M16 3c1.5 7.2 5.8 11.5 13 13-7.2 1.5-11.5 5.8-13 13-1.5-7.2-5.8-11.5-13-13 7.2-1.5 11.5-5.8 13-13z" fill="currentColor" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-down" viewBox="0 0 16 16"><path d="M8 3v10M4 9l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-check" viewBox="0 0 20 20"><path d="M5 10.5l3.2 3.2L15 6.8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </svg>
 
@@ -871,32 +885,52 @@ input[type=range]::-moz-range-thumb{width:28px;height:28px;border:0;border-radiu
     <p class="kick rv"><b>11</b><i></i>The math</p>
     <div class="head">
       <h2 class="ttl l rv"><span class="olrow"><span class="ol" data-em="6.1910"><svg viewBox="79 -700 6191 700" style="--em:6.1910" aria-hidden="true" focusable="false"><path fill="currentColor" d="M79 0H462C557 0 602 -45 602 -140V-560C602 -655 557 -700 462 -700H79ZM223 -132V-568H438C453 -568 458 -563 458 -548V-152C458 -137 453 -132 438 -132ZM866 0H1123C1218 0 1263 -45 1263 -140V-560C1263 -655 1218 -700 1123 -700H866C771 -700 726 -655 726 -560V-140C726 -45 771 0 866 0ZM870 -152V-548C870 -563 875 -568 890 -568H1099C1114 -568 1119 -563 1119 -548V-152C1119 -137 1114 -132 1099 -132H890C875 -132 870 -137 870 -152ZM1756 0H1900V-570H2090V-700H1566V-570H1756ZM2194 0H2338V-292H2586V0H2730V-700H2586V-424H2338V-700H2194ZM2888 0H3359V-132H3032V-293H3297V-423H3032V-568H3359V-700H2888ZM3726 0H3864V-446L4015 -93H4121L4272 -446V0H4414V-700H4256L4070 -288L3884 -700H3726ZM4509 0H4661L4704 -152H4944L4987 0H5145L4932 -700H4722ZM4741 -284 4824 -578 4907 -284ZM5296 0H5440V-570H5630V-700H5106V-570H5296ZM5734 0H5878V-292H6126V0H6270V-700H6126V-424H5878V-700H5734Z"/></svg><span class="sr">Do the math</span></span><span class="ol grad" data-em="7.8640"><svg viewBox="79 -700 7864 700" style="--em:7.8640" aria-hidden="true" focusable="false"><defs><linearGradient id="olg47" x1="0" y1="0" x2="1" y2="0"><stop offset="0" style="stop-color:var(--g1)"/><stop offset="1" style="stop-color:var(--g2)"/></linearGradient></defs><path fill="url(#olg47)" d="M79 0H223V-287H488V-417H223V-568H550V-700H79ZM774 0H1031C1126 0 1171 -45 1171 -140V-560C1171 -655 1126 -700 1031 -700H774C679 -700 634 -655 634 -560V-140C634 -45 679 0 774 0ZM778 -152V-548C778 -563 783 -568 798 -568H1007C1022 -568 1027 -563 1027 -548V-152C1027 -137 1022 -132 1007 -132H798C783 -132 778 -137 778 -152ZM1312 0H1456V-247H1572L1688 0H1843L1724 -255C1790 -267 1821 -312 1821 -391V-560C1821 -655 1776 -700 1681 -700H1312ZM1456 -375V-570H1657C1672 -570 1677 -565 1677 -550V-395C1677 -380 1672 -375 1657 -375ZM2339 0H2483V-239L2711 -700H2557L2412 -388L2267 -700H2111L2339 -239ZM2903 0H3160C3255 0 3300 -45 3300 -140V-560C3300 -655 3255 -700 3160 -700H2903C2808 -700 2763 -655 2763 -560V-140C2763 -45 2808 0 2903 0ZM2907 -152V-548C2907 -563 2912 -568 2927 -568H3136C3151 -568 3156 -563 3156 -548V-152C3156 -137 3151 -132 3136 -132H2927C2912 -132 2907 -137 2907 -152ZM3574 0H3818C3913 0 3958 -45 3958 -140V-700H3814V-152C3814 -137 3809 -132 3794 -132H3598C3583 -132 3578 -137 3578 -152V-700H3434V-140C3434 -45 3479 0 3574 0ZM4109 0H4253V-247H4369L4485 0H4640L4521 -255C4587 -267 4618 -312 4618 -391V-560C4618 -655 4573 -700 4478 -700H4109ZM4253 -375V-570H4454C4469 -570 4474 -565 4474 -550V-395C4474 -380 4469 -375 4454 -375ZM4999 0H5143V-247H5259L5375 0H5530L5411 -255C5477 -267 5508 -312 5508 -391V-560C5508 -655 5463 -700 5368 -700H4999ZM5143 -375V-570H5344C5359 -570 5364 -565 5364 -550V-395C5364 -380 5359 -375 5344 -375ZM5772 0H6029C6124 0 6169 -45 6169 -140V-560C6169 -655 6124 -700 6029 -700H5772C5677 -700 5632 -655 5632 -560V-140C5632 -45 5677 0 5772 0ZM5776 -152V-548C5776 -563 5781 -568 5796 -568H6005C6020 -568 6025 -563 6025 -548V-152C6025 -137 6020 -132 6005 -132H5796C5781 -132 5776 -137 5776 -152ZM6433 0H6690C6785 0 6830 -45 6830 -140V-560C6830 -655 6785 -700 6690 -700H6433C6338 -700 6293 -655 6293 -560V-140C6293 -45 6338 0 6433 0ZM6437 -152V-548C6437 -563 6442 -568 6457 -568H6666C6681 -568 6686 -563 6686 -548V-152C6686 -137 6681 -132 6666 -132H6457C6442 -132 6437 -137 6437 -152ZM6971 0H7109V-446L7260 -93H7366L7517 -446V0H7659V-700H7501L7315 -288L7129 -700H6971ZM7783 0H7943V-156H7783Z"/></svg><span class="sr">for your room.</span></span></span></h2>
-      <p class="lead rv">Play with the numbers. The starting values come from the proposal's projection: 24 months, already including the games fee, Sirius One, liquidity and setup.</p>
+      <p class="lead rv">Pick the games and play with the numbers. Each table's rake is split among its players, so the math is per player.</p>
     </div>
     <div class="calc">
       <div class="cbox ctl rv">
+        <span class="lbl">Your room</span>
+        <div class="gsel"><span class="top">Games in the math<output id="o-j"></output></span>
+          <div class="gchips">
+            <button type="button" class="gch on" data-r="7" data-s="4" aria-pressed="true">Truco <b>7%</b></button>
+            <button type="button" class="gch on" data-r="7" data-s="2" aria-pressed="true">Pif Paf <b>7%</b></button>
+            <button type="button" class="gch on" data-r="10" data-s="4" aria-pressed="true">Buraco <b>10%</b></button>
+            <button type="button" class="gch on" data-r="10" data-s="6" aria-pressed="true">Poker <b>10%</b></button>
+            <button type="button" class="gch on" data-r="10" data-s="2" aria-pressed="true">Pool <b>10%</b></button>
+            <button type="button" class="gch on" data-r="10" data-s="4" aria-pressed="true">Cacheta <b>10%</b></button>
+            <button type="button" class="gch on" data-r="10" data-s="6" aria-pressed="true">Cachetão <b>10%</b></button>
+          </div>
+        </div>
         <label><span class="top">New sign-ups in month 1<output id="o-c"></output></span><input type="range" id="c" min="100" max="20000" step="100" value="1000"></label>
-        <label><span class="top">Monthly growth<output id="o-g"></output></span><input type="range" id="g" min="0" max="30" step="1" value="10"></label>
-        <label><span class="top">Sign-ups who play<output id="o-a"></output></span><input type="range" id="a" min="10" max="100" step="5" value="70"></label>
-        <label><span class="top">Still playing next month<output id="o-r"></output></span><input type="range" id="r" min="0" max="90" step="5" value="60"></label>
-        <label><span class="top">Matches per night<output id="o-p"></output></span><input type="range" id="p" min="1" max="60" step="1" value="20"></label>
-        <label><span class="top">Nights per month<output id="o-n"></output></span><input type="range" id="n" min="1" max="30" step="1" value="20"></label>
-        <div class="fix"><span>Average rake per player, per match</span><b>R$ 0.87</b></div>
+        <label><span class="top">Matches per player, per night<output id="o-p"></output></span><input type="range" id="p" min="1" max="60" step="1" value="20"></label>
+        <label><span class="top">Average ticket per player, per match<output id="o-b"></output></span><input type="range" id="b" min="1" max="50" step="1" value="1"></label>
+        <details class="more"><summary>More settings<svg><use href="#i-chev"/></svg></summary>
+          <div class="more-in">
+            <label><span class="top">Monthly growth<output id="o-g"></output></span><input type="range" id="g" min="0" max="30" step="1" value="10"></label>
+            <label><span class="top">Sign-ups who play<output id="o-a"></output></span><input type="range" id="a" min="10" max="100" step="5" value="70"></label>
+            <label><span class="top">Still playing next month<output id="o-r"></output></span><input type="range" id="r" min="0" max="90" step="5" value="60"></label>
+            <label><span class="top">Nights per month<output id="o-n"></output></span><input type="range" id="n" min="1" max="30" step="1" value="20"></label>
+          </div>
+        </details>
       </div>
       <div class="cbox cres rv" style="--d:.1s">
         <span class="lbl">Your result over 24 months</span>
-        <p class="big-n" id="tot">R$ 34.9M</p>
-        <div class="mths"><div><span>Month 1</span><b id="m1"></b></div><div><span>Month 12</span><b id="m12"></b></div><div><span>Month 24</span><b id="m24"></b></div></div>
+        <p class="big-n" id="tot">R$ 3.3M</p>
+        <p class="sub">In month 24, <b id="m24"></b> per month.</p>
         <div class="chart" id="chart"></div>
         <div class="axis"><span>Month 1</span><span>6</span><span>12</span><span>18</span><span>24</span></div>
-        <div class="brk">
-          <div><span>Room GGR (rake)</span><b id="b-ggr"></b></div>
-          <div><span>(−) Games fee · 10%</span><b id="b-tx"></b></div>
-          <div><span>(−) Sirius One and liquidity</span><b id="b-sp"></b></div>
-          <div><span>(−) Room setup · one time</span><b>−R$ 50,000</b></div>
-          <div class="tot"><span>Result</span><b id="b-res"></b></div>
-        </div>
-        <p class="disc">Illustrative projection, not a guarantee. It uses the proposal's average rake. Payouts are always calculated on the rake actually collected.</p>
+        <details class="more conta"><summary>See the math<svg><use href="#i-chev"/></svg></summary>
+          <div class="brk">
+            <div><span>Rounds in month 24</span><b id="rnd"></b></div>
+            <div><span>Room GGR (rake)</span><b id="b-ggr"></b></div>
+            <div><span>(−) Games fee · 10% of rake</span><b id="b-tx"></b></div>
+            <div><span class="two">(−) Sirius One · 5% of GGR<small id="b-min"></small></span><b id="b-so"></b></div>
+            <div><span>(−) Liquidity · 10% of GGR</span><b id="b-lq"></b></div>
+            <div><span>(−) Room setup · one time</span><b>−R$ 50,000</b></div>
+            <div class="tot"><span>Result</span><b id="b-res"></b></div>
+          </div>
+        </details>
+        <p class="disc">Illustrative projection, not a guarantee. Payouts are always calculated on the rake actually collected.</p>
       </div>
     </div>
   </div>
@@ -1135,42 +1169,54 @@ function onScroll() {
 addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, {passive: true});
 addEventListener('resize', () => { fit(); fitHall(); sizePhones(); centerColl(); onScroll(); });
 
-/* ===== A conta (mesma fórmula da proposta) =====
+/* ===== A conta (regra da proposta: o rake de cada mesa é dividido entre os jogadores, então a conta é por jogador) =====
    ativos(m) = jogam × cadastros(m) + continuam × ativos(m−1)
-   GGR(m) = ativos × partidas × noites × rake médio
+   rake por jogador, por partida = ticket médio × rake médio dos jogos escolhidos
+   GGR(m) = ativos × partidas × noites × rake por jogador
+   rodadas(m) = ativos × partidas × noites ÷ jogadores por mesa (média dos jogos escolhidos)
    resultado = GGR − 10% (taxa dos jogos) − máx(5% GGR; R$ 25 mil) (Sirius One) − 10% GGR (liquidity) − setup no mês 1 */
-const K = 242947 / 700 / 400;   // rake médio por jogador por partida (projeção da proposta)
-const brl = v => 'R$ ' + Math.round(v).toLocaleString('en-US');
+const brl = v => (v < 0 ? '−' : '') + 'R$ ' + Math.round(Math.abs(v)).toLocaleString('en-US');
 const short = v => {
   const a = Math.abs(v), s = v < 0 ? '−' : '';
   if (a >= 1e6) return s + 'R$ ' + (a / 1e6).toLocaleString('en-US', {maximumFractionDigits: 1}) + 'M';
   if (a >= 1e3) return s + 'R$ ' + Math.round(a / 1e3).toLocaleString('en-US') + 'k';
   return s + 'R$ ' + Math.round(a);
 };
+const cnt = v => v >= 1e6 ? (v / 1e6).toLocaleString('en-US', {maximumFractionDigits: 1}) + 'M' : v >= 1e3 ? Math.round(v / 1e3).toLocaleString('en-US') + 'k' : String(Math.round(v));
+const pct = v => v.toLocaleString('en-US', {maximumFractionDigits: 1}) + '%';
 const chart = $('#chart');
 chart.innerHTML = Array.from({length: 24}, (_, i) => `<i style="--d:${i * .02}s"></i>`).join('');
 const bars = [...chart.children];
-const fmt = {c: v => (+v).toLocaleString('en-US'), g: v => v + '%', a: v => v + '%', r: v => v + '%', p: v => v, n: v => v};
+const fmt = {c: v => (+v).toLocaleString('en-US'), g: v => v + '%', a: v => v + '%', r: v => v + '%', p: v => v, n: v => v, b: v => 'R$ ' + v};
 let shown = 0, raf;
 function calc() {
   const v = {};
-  ['c', 'g', 'a', 'r', 'p', 'n'].forEach(k => {
+  ['c', 'g', 'a', 'r', 'p', 'n', 'b'].forEach(k => {
     const el = $('#' + k); v[k] = +el.value;
     $('#o-' + k).textContent = fmt[k](el.value);
     el.style.setProperty('--p', ((el.value - el.min) / (el.max - el.min) * 100) + '%');
   });
-  let act = 0, tot = 0, ggrT = 0, txT = 0, spT = 0; const res = [];
+  const gs = $$('.gch.on'), rk = gs.reduce((t, g) => t + +g.dataset.r, 0) / gs.length / 100;
+  const perMesa = gs.reduce((t, g) => t + 1 / g.dataset.s, 0) / gs.length, rpp = v.b * rk;
+  $('#o-j').textContent = 'rake ' + pct(rk * 100);
+  let act = 0, tot = 0, ggrT = 0, txT = 0, soT = 0, lqT = 0, minM = 0, rodadas = 0; const res = [];
   for (let m = 1; m <= 24; m++) {
     const neu = v.c * Math.pow(1 + v.g / 100, m - 1);
     act = v.a / 100 * neu + v.r / 100 * act;
-    const ggr = act * K * v.p * v.n, tx = .1 * ggr, sp = Math.max(.05 * ggr, 25000) + .1 * ggr;
-    const net = ggr - tx - sp - (m === 1 ? 50000 : 0);
-    res.push(net); tot += net; ggrT += ggr; txT += tx; spT += sp;
+    rodadas = act * v.p * v.n * perMesa;
+    const ggr = act * rpp * v.p * v.n, tx = .1 * ggr, lq = .1 * ggr;
+    const so = Math.max(.05 * ggr, 25000);   // mínimo obrigatório do cliente: R$ 25 mil até 5% do GGR passar disso
+    if (.05 * ggr < 25000) minM++;
+    const net = ggr - tx - so - lq - (m === 1 ? 50000 : 0);
+    res.push(net); tot += net; ggrT += ggr; txT += tx; soT += so; lqT += lq;
   }
   animateTo(tot);
-  $('#m1').textContent = short(res[0]); $('#m12').textContent = short(res[11]); $('#m24').textContent = short(res[23]);
-  $('#b-ggr').textContent = brl(ggrT); $('#b-tx').textContent = '−' + brl(txT); $('#b-sp').textContent = '−' + brl(spT);
+  $('#m24').textContent = short(res[23]);
+  $('#b-ggr').textContent = brl(ggrT); $('#b-tx').textContent = '−' + brl(txT);
+  $('#b-so').textContent = '−' + brl(soT); $('#b-lq').textContent = '−' + brl(lqT);
+  $('#b-min').textContent = minM ? 'R$ 25k/month minimum in ' + minM + ' of 24 months' : 'above the R$ 25k minimum in all 24 months';
   $('#b-res').textContent = brl(tot);
+  $('#rnd').textContent = '≈ ' + cnt(rodadas);
   const mx = Math.max(...res.map(Math.abs), 1);
   bars.forEach((b, i) => { b.style.height = (Math.abs(res[i]) / mx * 100) + '%'; b.classList.toggle('neg', res[i] < 0); });
 }
@@ -1186,6 +1232,10 @@ function animateTo(target) {
   raf = requestAnimationFrame(step);
 }
 $$('.ctl input').forEach(el => el.addEventListener('input', calc));
+$$('.gch').forEach(b => b.addEventListener('click', () => {
+  if (b.classList.contains('on') && $$('.gch.on').length === 1) return;   // fica pelo menos um jogo na conta
+  b.classList.toggle('on'); b.setAttribute('aria-pressed', b.classList.contains('on')); calc();
+}));
 new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting) { calc(); o.disconnect(); } }), {threshold: .3}).observe($('.calc'));
 
 /* ===== Modo apresentação (desktop): → ou PageDown avança uma dobra, ← ou PageUp volta, como num PPT ===== */
